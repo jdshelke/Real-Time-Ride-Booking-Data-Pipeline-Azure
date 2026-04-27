@@ -120,7 +120,7 @@ def generate_incomplete_events(row, event_row, events_data_list):
     booking_time = pd.to_datetime(str(row["Date"]) + " " + str(row["Time"]))
     vtat = pd.to_timedelta(row["Avg VTAT"] if pd.notna(row["Avg VTAT"]) else 0, unit="m")
     ctat = pd.to_timedelta(row["Avg CTAT"] if pd.notna(row["Avg CTAT"]) else 0, unit="m")
-    ride_incomplete_time = pd.to_timedelta(random.randint(120, 1500), unit="s")
+    ride_incomplete_time = booking_time + vtat + ctat
     payment_time = pd.to_timedelta(random.randint(15, 300), unit="s")
     for event in events:
         row_copy = event_row.copy()
@@ -141,7 +141,7 @@ def generate_incomplete_events(row, event_row, events_data_list):
             row_copy["Event Time"] = event_time
         elif event == "RIDE_INCOMPLETE":
             event_type = event
-            event_time = booking_time + vtat + ride_incomplete_time
+            event_time = ride_incomplete_time
             incomplete_rides = 1
             incomplete_reason  = row["Incomplete Rides Reason"]
             ride_distance = row["Ride Distance"]
@@ -152,7 +152,7 @@ def generate_incomplete_events(row, event_row, events_data_list):
             row_copy["Ride Distance"] = ride_distance
         elif event == "PAYMENT_COMPLETED":
             event_type = event
-            event_time = booking_time + vtat + ctat + payment_time
+            event_time = ride_incomplete_time + payment_time
             booking_value = row["Booking Value"]
             payment_method = row["Payment Method"]
             row_copy["Event Type"] = event_type
