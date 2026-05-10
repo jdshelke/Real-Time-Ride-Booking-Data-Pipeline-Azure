@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from typing import List
 import pandas as pd
+from contextlib import asynccontextmanager
 
 # Import all methods from event_generator
 from src.transformations.event_generator import (
@@ -11,10 +12,25 @@ from src.transformations.event_generator import (
     generate_customer_cancelled_events
 )
 
-# Import event queue
-from src.queue.event_queue import event_queue
+# Import event hub producer
+from src.producer.eventhub_producer import (
+    initialize_eventhub_producer,
+    close_eventhub_producer,
+    send_events_to_eventhub
+)
 
-app = FastAPI()
+@asynccontextmanager
+async def app_lifecycle(app: FastAPI):
+
+    # Startup
+    await initialize_eventhub_producer()
+
+    yield
+
+    # Shutdown
+    await close_eventhub_producer()
+
+app = FastAPI(lifespan=app_lifecycle)
 
 status_function_map = {
     "Completed": generate_completed_events,
@@ -26,7 +42,7 @@ status_function_map = {
 
 @app.post("/generate-events")
 
-def generate_events(rows: List[dict]):
+async def generate_events(rows: List[dict]):
 
     events_data_list = []
 
@@ -62,8 +78,7 @@ def generate_events(rows: List[dict]):
         if func:
             func(row, base_event_row, events_data_list)
         
-    for event in events_data_list:
-        event_queue.append(event)
+    await send_events_to_eventhub(events_data_list)
         
     return {
         "total_generated_events": len(events_data_list),

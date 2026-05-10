@@ -1,0 +1,72 @@
+{
+	"/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project": {
+		"resource_id": "/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project",
+		"resource_type": "azurerm_resource_group",
+		"resource_name": "res-0"
+	},
+	"/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.Databricks/accessConnectors/storage-access-to-databricks": {
+		"resource_id": "/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.Databricks/accessConnectors/storage-access-to-databricks",
+		"resource_type": "azurerm_databricks_access_connector",
+		"resource_name": "res-15"
+	},
+	"/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.Databricks/workspaces/databricks-azure-project": {
+		"resource_id": "/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.Databricks/workspaces/databricks-azure-project",
+		"resource_type": "azurerm_databricks_workspace",
+		"resource_name": "res-16"
+	},
+	"/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.EventHub/namespaces/uber-eventhub-ns": {
+		"resource_id": "/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.EventHub/namespaces/uber-eventhub-ns",
+		"resource_type": "azurerm_eventhub_namespace",
+		"resource_name": "res-17"
+	},
+	"/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.EventHub/namespaces/uber-eventhub-ns/authorizationrules/RootManageSharedAccessKey": {
+		"resource_id": "/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.EventHub/namespaces/uber-eventhub-ns/authorizationRules/RootManageSharedAccessKey",
+		"resource_type": "azurerm_eventhub_namespace_authorization_rule",
+		"resource_name": "res-18"
+	},
+	"/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.EventHub/namespaces/uber-eventhub-ns/eventhubs/uber-ride-events": {
+		"resource_id": "/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.EventHub/namespaces/uber-eventhub-ns/eventhubs/uber-ride-events",
+		"resource_type": "azurerm_eventhub",
+		"resource_name": "res-19"
+	},
+	"/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.EventHub/namespaces/uber-eventhub-ns/eventhubs/uber-ride-events/authorizationrules/eventhub-policy": {
+		"resource_id": "/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.EventHub/namespaces/uber-eventhub-ns/eventhubs/uber-ride-events/authorizationRules/eventhub-policy",
+		"resource_type": "azurerm_eventhub_authorization_rule",
+		"resource_name": "res-20"
+	},
+	"/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.EventHub/namespaces/uber-eventhub-ns/eventhubs/uber-ride-events/consumergroups/$Default": {
+		"resource_id": "/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.EventHub/namespaces/uber-eventhub-ns/eventhubs/uber-ride-events/consumerGroups/$Default",
+		"resource_type": "azurerm_eventhub_consumer_group",
+		"resource_name": "res-21"
+	},
+	"/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.KeyVault/vaults/jd-azure-project-kv": {
+		"resource_id": "/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.KeyVault/vaults/jd-azure-project-kv",
+		"resource_type": "azurerm_key_vault",
+		"resource_name": "res-23"
+	},
+	"/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.KeyVault/vaults/jd-azure-project-kv/secrets/eventhub-connection-string": {
+		"resource_id": "https://jd-azure-project-kv.vault.azure.net/secrets/eventhub-connection-string/5ddceb28440047j5860cc7d527e3c8bc",
+		"resource_type": "azurerm_key_vault_secret",
+		"resource_name": "res-24"
+	},
+	"/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.Storage/storageAccounts/jdazstorageac": {
+		"resource_id": "/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.Storage/storageAccounts/jdazstorageac",
+		"resource_type": "azurerm_storage_account",
+		"resource_name": "res-67"
+	},
+	"/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.Storage/storageAccounts/jdazstorageac/blobServices/default/containers/databricks-metastore": {
+		"resource_id": "/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.Storage/storageAccounts/jdazstorageac/blobServices/default/containers/databricks-metastore",
+		"resource_type": "azurerm_storage_container",
+		"resource_name": "res-71"
+	},
+	"/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.Storage/storageAccounts/jdazstorageac/blobServices/default/containers/real-time-ride-booking-data-pipeline-azure": {
+		"resource_id": "/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.Storage/storageAccounts/jdazstorageac/blobServices/default/containers/real-time-ride-booking-data-pipeline-azure",
+		"resource_type": "azurerm_storage_container",
+		"resource_name": "res-73"
+	},
+	"/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.Storage/storageAccounts/jdazstorageac/queueServices/default": {
+		"resource_id": "/subscriptions/99ea9e91-505c-4801-98ac-a07dae7eeedc/resourceGroups/RG-Azure-Project/providers/Microsoft.Storage/storageAccounts/jdazstorageac",
+		"resource_type": "azurerm_storage_account_queue_properties",
+		"resource_name": "res-76"
+	}
+}
