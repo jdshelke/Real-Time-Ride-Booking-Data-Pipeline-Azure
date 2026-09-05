@@ -85,6 +85,10 @@ final_df = structured_df.select("data.*")
 
 # COMMAND ----------
 
+
+
+# COMMAND ----------
+
 final_df = final_df.toDF(
     "booking_id",
     "booking_status",
@@ -107,6 +111,14 @@ final_df = final_df.toDF(
 
 # COMMAND ----------
 
+# Add ingestion timestamp
+final_df = final_df.withColumn(
+    "bronze_ingestion_time",
+    current_timestamp()
+)
+
+# COMMAND ----------
+
 # Checkpoint path
 checkpoint_path = "abfss://real-time-ride-booking-data-pipeline-azure@jdazstorageac.dfs.core.windows.net/bronze/checkpoints/eventhub_to_bronze"
 
@@ -121,6 +133,3 @@ query = (
     .toTable("real_time_ride_booking_data_pipeline_azure.bronze.uber_ride_events")
 )
 query.awaitTermination()
-
-# COMMAND ----------
-
